@@ -1,0 +1,2 @@
+
+empty_game_enable_ground (Enable generic ground nodes) bool false
