@@ -31,7 +31,26 @@ core.register_node("ground:water", {
   drop = "",
   liquidtype = "source",
   liquid_viscosity = 1,
-  liquid_alternative_flowing = "ground:water",
+  liquid_alternative_flowing = "ground:water_flow",
+  liquid_alternative_source = "ground:water",
+})
+
+core.register_node("ground:water_flow", {
+  description = "Flowing Water",
+  tiles = {"ground_water.png"},
+  groups = {water=3, liquid=3, not_in_creative_inventory=1},
+  paramtype = "light",
+  drawtype = "flowingliquid",
+  use_texture_alpha = "blend",
+  walkable = false,
+  pointable = false,
+  diggable = false,
+  buildable_to = true,
+  is_ground_content = false,
+  drop = "",
+  liquidtype = "flowing",
+  liquid_viscosity = 1,
+  liquid_alternative_flowing = "ground:water_flow",
   liquid_alternative_source = "ground:water",
 })
 
