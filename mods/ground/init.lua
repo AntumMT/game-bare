@@ -1,5 +1,5 @@
 
-if not core.settings:get_bool("empty_game_enable_ground", false) then
+if not core.settings:get_bool("bare_game_enable_ground", false) then
   do return end
 end
 

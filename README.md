@@ -1,3 +1,5 @@
-# Empty Minetest Game
+# Bare Minetest Game
 
-An empty game for Minetest. For this game to do anything you will need to install 3rd party mods.
+A bare minimum game for Minetest.
+
+To enable some default ground & water nodes enable the setting `bare_game_enable_ground`.
