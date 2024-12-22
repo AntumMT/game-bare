@@ -4,21 +4,21 @@ if not core.settings:get_bool("bare_game_enable_ground", false) then
 end
 
 
-core.register_node("ground:dirt", {
+core.register_node("bare_ground:dirt", {
   description = "Dirt",
-  tiles = {"ground_dirt.png"},
+  tiles = {"bare_ground_dirt.png"},
   groups = {crumbly=3},
 })
 
-core.register_node("ground:stone", {
+core.register_node("bare_ground:stone", {
   description = "Stone",
-  tiles = {"ground_stone.png"},
+  tiles = {"bare_ground_stone.png"},
   groups = {cracky=3},
 })
 
-core.register_node("ground:water", {
+core.register_node("bare_ground:water", {
   description = "Water",
-  tiles = {"ground_water.png"},
+  tiles = {"bare_ground_water.png"},
   groups = {water=3, liquid=3},
   paramtype = "light",
   drawtype = "liquid",
@@ -31,13 +31,13 @@ core.register_node("ground:water", {
   drop = "",
   liquidtype = "source",
   liquid_viscosity = 1,
-  liquid_alternative_flowing = "ground:water_flow",
-  liquid_alternative_source = "ground:water",
+  liquid_alternative_flowing = "bare_ground:water_flow",
+  liquid_alternative_source = "bare_ground:water",
 })
 
-core.register_node("ground:water_flow", {
+core.register_node("bare_ground:water_flow", {
   description = "Flowing Water",
-  tiles = {"ground_water.png"},
+  tiles = {"bare_ground_water.png"},
   groups = {water=3, liquid=3, not_in_creative_inventory=1},
   paramtype = "light",
   drawtype = "flowingliquid",
@@ -50,11 +50,11 @@ core.register_node("ground:water_flow", {
   drop = "",
   liquidtype = "flowing",
   liquid_viscosity = 1,
-  liquid_alternative_flowing = "ground:water_flow",
-  liquid_alternative_source = "ground:water",
+  liquid_alternative_flowing = "bare_ground:water_flow",
+  liquid_alternative_source = "bare_ground:water",
 })
 
 
-core.register_alias("mapgen_dirt", "ground:dirt")
-core.register_alias("mapgen_stone", "ground:stone")
-core.register_alias("mapgen_water_source", "ground:water")
+core.register_alias("mapgen_dirt", "bare_ground:dirt")
+core.register_alias("mapgen_stone", "bare_ground:stone")
+core.register_alias("mapgen_water_source", "bare_ground:water")
